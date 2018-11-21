@@ -1,3 +1,5 @@
 # soroka-hackathon
 
-[see the app](https://soroka-hackathon.herokuapp.com/)
+## by Ido Kessler, Yossi Eynav & Jonathan Somer
+
+[The app](https://soroka-hackathon.herokuapp.com/)
