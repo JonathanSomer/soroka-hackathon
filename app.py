@@ -15,7 +15,7 @@ ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
 @app.route('/')
 def home():
-	return render_template('./client/dist/client/index.html', number=an_incrementing_number)
+	return render_template('./client/dist/client/index.html')
 
 
 @app.route('/classify', methods=['POST'])
