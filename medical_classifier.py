@@ -3,7 +3,7 @@ import http.client, urllib.request, urllib.parse, urllib.error, base64, json
 
 class MedicalObjectClassifier:
     
-    def __init__(self, prediction_key):
+    def __init__(self, prediction_key='3075f822bc1d4608b973d305148a4b34'):
         self._headers = {
             'Content-Type': 'multipart/octet-stream',
             'Prediction-key': prediction_key,
