@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <div class=\"main\">\n    <video #video autoplay></video>\n  </div>\n  <app-employes-heads></app-employes-heads>\n</div>\n"
+module.exports = "<div>\r\n  <div class=\"main\">\r\n    <video #video autoplay></video>\r\n  </div>\r\n  <app-employes-heads></app-employes-heads>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -163,7 +163,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"employees-container\">\n  <div *ngFor=\"let employe of employes\" class=\"employee\">\n    <img [src]=\"employe.imageUrl\"/>\n  </div>\n</nav>\n"
+module.exports = "<nav class=\"employees-container\">\r\n  <div *ngFor=\"let employe of employes\" class=\"employee\">\r\n    <img [src]=\"employe.imageUrl\"/>\r\n  </div>\r\n</nav>\r\n"
 
 /***/ }),
 
@@ -287,7 +287,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Volumes/dev/soroka-hackathon/client/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\kessi\Repo\soroka-hackathon\client\src\main.ts */"./src/main.ts");
 
 
 /***/ })
