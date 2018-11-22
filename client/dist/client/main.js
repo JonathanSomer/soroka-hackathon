@@ -23,6 +23,69 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
+/***/ "./src/app/about-us/about-us.component.html":
+/*!**************************************************!*\
+  !*** ./src/app/about-us/about-us.component.html ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\r\n  <div>\r\n    <h1 style=\"text-align: center;\">\r\n      אודות\r\n    </h1>\r\n    <h2 style=\"text-align: right;direction: rtl;\">\r\n      \"מי זה מה זה\", הינה אפליקציה שנוצרה בהאקטון בבית החולים סורוקה.\r\n       מטרתינו לייצר סביבה ידידותית ולאפשר לילדים להתחבר לציוד ולאנשים בבית החולים בצורה מסקרנת וכיפית.\r\n    </h2>\r\n    <h1 style=\"text-align: center;\">\r\n      הקבוצה\r\n    </h1>\r\n    <h2 style=\"text-align: right;direction: rtl;\">\r\n      יוסי עינב, יהונתן זומר, עידו קסלר, ד\"ר מנור שפריץ, ליאת טודריס, רויטל גוטרמן, קלאודיו אלתר, אנדי פלקון, סטאס ריבקין.\r\n    </h2>\r\n  </div>\r\n</p>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/about-us/about-us.component.scss":
+/*!**************************************************!*\
+  !*** ./src/app/about-us/about-us.component.scss ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/about-us/about-us.component.ts":
+/*!************************************************!*\
+  !*** ./src/app/about-us/about-us.component.ts ***!
+  \************************************************/
+/*! exports provided: AboutUsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AboutUsComponent", function() { return AboutUsComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var AboutUsComponent = /** @class */ (function () {
+    function AboutUsComponent() {
+    }
+    AboutUsComponent.prototype.ngOnInit = function () {
+    };
+    AboutUsComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-about-us',
+            template: __webpack_require__(/*! ./about-us.component.html */ "./src/app/about-us/about-us.component.html"),
+            styles: [__webpack_require__(/*! ./about-us.component.scss */ "./src/app/about-us/about-us.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], AboutUsComponent);
+    return AboutUsComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/app.component.html":
 /*!************************************!*\
   !*** ./src/app/app.component.html ***!
@@ -30,7 +93,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <div class=\"main\">\n    <router-outlet></router-outlet>\n  </div>\n  <mat-tab-group selectedIndex=\"1\" (selectedIndexChange)=\"changeCurrentTab($event)\" headerPosition=\"below\">\n    <mat-tab label=\"First\"></mat-tab>\n    <mat-tab label=\"Second\" ></mat-tab>\n    <mat-tab label=\"Third\"></mat-tab>\n  </mat-tab-group>\n</div>\n"
+module.exports = "<div>\r\n  <div class=\"main\">\r\n    <router-outlet></router-outlet>\r\n  </div>\r\n  <mat-tab-group selectedIndex=\"1\" (selectedIndexChange)=\"changeCurrentTab($event)\" headerPosition=\"below\">\r\n    <mat-tab label=\"First\"></mat-tab>\r\n    <mat-tab label=\"Second\" ></mat-tab>\r\n    <mat-tab label=\"Third\"></mat-tab>\r\n  </mat-tab-group>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -92,6 +155,9 @@ var AppComponent = /** @class */ (function () {
             case 0:
                 this.router.navigateByUrl('/employees');
                 break;
+            case 2:
+                this.router.navigateByUrl('/about-us');
+                break;
         }
     };
     AppComponent.prototype.onEmployeeClick = function (employee) {
@@ -116,11 +182,12 @@ var AppComponent = /** @class */ (function () {
 /*!*******************************!*\
   !*** ./src/app/app.module.ts ***!
   \*******************************/
-/*! exports provided: AppModule */
+/*! exports provided: MyHammerConfig, AppModule */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MyHammerConfig", function() { return MyHammerConfig; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
@@ -131,6 +198,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _you_tuve_iframe_you_tuve_iframe_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./you-tuve-iframe/you-tuve-iframe.component */ "./src/app/you-tuve-iframe/you-tuve-iframe.component.ts");
 /* harmony import */ var _video_game_video_game_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./video-game/video-game.component */ "./src/app/video-game/video-game.component.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var hammerjs__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! hammerjs */ "./node_modules/hammerjs/hammer.js");
+/* harmony import */ var hammerjs__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(hammerjs__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _about_us_about_us_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./about-us/about-us.component */ "./src/app/about-us/about-us.component.ts");
+var __extends = (undefined && undefined.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -146,9 +226,26 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
+
+var MyHammerConfig = /** @class */ (function (_super) {
+    __extends(MyHammerConfig, _super);
+    function MyHammerConfig() {
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.overrides = {
+            // override hammerjs default configuration
+            'swipe': { direction: hammerjs__WEBPACK_IMPORTED_MODULE_9__["DIRECTION_ALL"] }
+        };
+        return _this;
+    }
+    return MyHammerConfig;
+}(_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["HammerGestureConfig"]));
+
 var appRoutes = [
     { path: 'employees', component: _employes_heads_employes_heads_component__WEBPACK_IMPORTED_MODULE_5__["EmployesHeadsComponent"] },
     { path: 'video-game', component: _video_game_video_game_component__WEBPACK_IMPORTED_MODULE_7__["VideoGameComponent"] },
+    { path: 'about-us', component: _about_us_about_us_component__WEBPACK_IMPORTED_MODULE_10__["AboutUsComponent"] },
     { path: '**', component: _video_game_video_game_component__WEBPACK_IMPORTED_MODULE_7__["VideoGameComponent"] },
 ];
 var AppModule = /** @class */ (function () {
@@ -160,7 +257,8 @@ var AppModule = /** @class */ (function () {
                 _app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"],
                 _employes_heads_employes_heads_component__WEBPACK_IMPORTED_MODULE_5__["EmployesHeadsComponent"],
                 _you_tuve_iframe_you_tuve_iframe_component__WEBPACK_IMPORTED_MODULE_6__["YouTuveIframeComponent"],
-                _video_game_video_game_component__WEBPACK_IMPORTED_MODULE_7__["VideoGameComponent"]
+                _video_game_video_game_component__WEBPACK_IMPORTED_MODULE_7__["VideoGameComponent"],
+                _about_us_about_us_component__WEBPACK_IMPORTED_MODULE_10__["AboutUsComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -174,7 +272,12 @@ var AppModule = /** @class */ (function () {
             entryComponents: [
                 _you_tuve_iframe_you_tuve_iframe_component__WEBPACK_IMPORTED_MODULE_6__["YouTuveIframeComponent"]
             ],
-            providers: [],
+            providers: [
+                {
+                    provide: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["HAMMER_GESTURE_CONFIG"],
+                    useClass: MyHammerConfig
+                }
+            ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]]
         })
     ], AppModule);
@@ -192,7 +295,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"employees-container\">\n  <div (click)=\"clickOnEmployee(employe)\" *ngFor=\"let employe of employes\" class=\"employee\">\n    <img [src]=\"employe.imageUrl\"/>\n  </div>\n</nav>\n"
+module.exports = "<nav class=\"employees-container\">\r\n  <div (click)=\"clickOnEmployee()\" class=\"employee\" (swipeleft)=\"swipe('', $event.type)\" (swiperight)=\"swipe('', $event.type)\">\r\n      <img [src]=\"employes[currentEmployee].imageUrl\"/>\r\n  </div>\r\n</nav>\r\n"
 
 /***/ }),
 
@@ -235,10 +338,11 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var EmployesHeadsComponent = /** @class */ (function () {
     function EmployesHeadsComponent(dialog) {
         this.dialog = dialog;
+        this.currentEmployee = 1;
         this.employes = [
-            { name: 'קלאודיו אלתר', title: 'אח', imageUrl: 'https://s3.amazonaws.com/yossi-eynav-uploads/cloudyo.jpg', videoUrl: 'https://youtu.be/V-7pTTNvUs8' },
-            { name: 'רויטל גוטרמן', title: 'אחות', imageUrl: 'https://s3.amazonaws.com/yossi-eynav-uploads/revital.jpg', videoUrl: 'https://youtu.be/UQ2wIJj__ls' },
-            { name: 'מנור שפריץ', title: 'רופא', imageUrl: 'https://s3.amazonaws.com/yossi-eynav-uploads/cloudyo.jpg', videoUrl: 'https://youtu.be/V-7pTTNvUs8' },
+            { name: 'קלאודיו אלתר', title: 'אח', imageUrl: './assets/claudio.png', videoUrl: 'https://www.youtube.com/embed/V-7pTTNvUs8' },
+            { name: 'רויטל גוטרמן', title: 'אחות', imageUrl: './assets/revital.png', videoUrl: 'https://www.youtube.com/embed/UQ2wIJj__ls' },
+            { name: 'מנור שפריץ', title: 'רופא', imageUrl: './assets/manor.png', videoUrl: 'https://www.youtube.com/embed/V-7pTTNvUs8' }
         ];
     }
     EmployesHeadsComponent.prototype.ngOnInit = function () {
@@ -249,8 +353,18 @@ var EmployesHeadsComponent = /** @class */ (function () {
             data: { url: url, title: title }
         });
     };
-    EmployesHeadsComponent.prototype.clickOnEmployee = function (employee) {
-        this.openyouTubeMovie(employee.videoUrl, employee.name);
+    EmployesHeadsComponent.prototype.swipe = function (type) {
+        switch (type) {
+            case 'swipeleft':
+                this.currentEmployee--;
+                break;
+            case 'swiperight':
+                this.currentEmployee++;
+                break;
+        }
+    };
+    EmployesHeadsComponent.prototype.clickOnEmployee = function () {
+        // this.openyouTubeMovie(employee.videoUrl, employee.name);
     };
     EmployesHeadsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -274,7 +388,7 @@ var EmployesHeadsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"main\">\n  <video #video autoplay></video>\n  <button (click)=\"sendCurrentFrame()\"> Send Frame!</button>\n</div>\n"
+module.exports = "<div class=\"main\">\r\n  <video #video autoplay></video>\r\n  <button (click)=\"sendCurrentFrame()\">\r\n    <img src=\"./assets/search.svg\"/> Search Now!\r\n  </button>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -285,7 +399,7 @@ module.exports = "<div class=\"main\">\n  <video #video autoplay></video>\n  <bu
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "button {\n  position: absolute;\n  width: 100px;\n  left: 0;\n  bottom: 0;\n  color: red; }\n\nvideo {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover; }\n"
+module.exports = "button {\n  position: absolute;\n  left: 0;\n  bottom: 13px;\n  width: 100%;\n  display: flex;\n  flex-flow: row;\n  justify-content: center;\n  align-items: center;\n  font-size: 18px;\n  font-weight: 700;\n  color: white;\n  background: rgba(0, 0, 0, 0.6);\n  border: none;\n  padding: 10px;\n  box-sizing: border-box;\n  transition: all 1s;\n  outline: 0; }\n  button img {\n    width: 40px; }\n  button:active {\n    background: rgba(189, 185, 185, 0.45); }\n  video {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover; }\n"
 
 /***/ }),
 
@@ -350,12 +464,19 @@ var VideoGameComponent = /** @class */ (function () {
     };
     VideoGameComponent.prototype.requestCameraAccess = function () {
         var _this = this;
-        navigator.mediaDevices.getUserMedia({ video: { facingMode: { exact: "environment" } } })
+        navigator.mediaDevices.getUserMedia({ video: { facingMode: { exact: 'environment' } } })
             .then(function (stream) {
             _this.video.nativeElement.srcObject = stream;
         })
-            .catch(function (err) {
-            console.error(err);
+            .catch(function () {
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then(function (stream) {
+                _this.video.nativeElement.srcObject = stream;
+            })
+                .catch(function (err) {
+                console.error(err);
+                /* handle the error */
+            });
             /* handle the error */
         });
     };
@@ -385,7 +506,7 @@ var VideoGameComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <p *ngIf=\"data.title\">{{data.title}}</p>\n  <iframe width=\"100%\" height=\"400px\"\n          [src]=\"iframeUrl()\"\n          frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen>\n\n  </iframe>\n</div>\n"
+module.exports = "<div>\r\n  <p *ngIf=\"data.title\">{{data.title}}</p>\r\n  <iframe width=\"100%\" height=\"400px\"\r\n          [src]=\"iframeUrl()\"\r\n          frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen>\r\n\r\n  </iframe>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -519,7 +640,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Volumes/dev/soroka-hackathon/client/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\kessi\Repo\soroka-hackathon\client\src\main.ts */"./src/main.ts");
 
 
 /***/ })
