@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, send_from_directory
+from flask import Flask, render_template, request, redirect, url_for, send_from_directory, jsonify, json
 from flask_pymongo import PyMongo
 from logging.config import dictConfig
 import os
@@ -29,14 +29,14 @@ def classify_image():
 	classifier = MedicalObjectClassifier()
 	category = classifier.classify(file_path)
 	os.remove(file_path)
-	return category
+	return jsonify({ 'name' : category, 'description' : 'bla bla bla', 'url' : 'www.youtube.com'})
 
 
 
 ########################################################################
-
+#
 #						 PRIVATE
-
+#
 ########################################################################
 
 def save_image(request):
@@ -50,3 +50,6 @@ def save_image(request):
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+def map_category_to_response():
+	cat
