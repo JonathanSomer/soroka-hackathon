@@ -37,10 +37,9 @@ export class AppComponent implements OnInit {
     canvas.width = canvasWidth;
     canvas.height = canvasHeight;
 
-    debugger;
     canvas.getContext('2d').drawImage(this.video.nativeElement, 0, 0, canvasWidth, canvasHeight);
     canvas.toBlob((blob) => {
-      const f = new File([blob], 'image.jpeg', {type:"image/jpeg");
+      const f = new File([blob], 'image.jpeg', {type:"image/jpeg"});
 
       const formData = new FormData();
       formData.append('image', f);
