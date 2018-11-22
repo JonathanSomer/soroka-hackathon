@@ -20,6 +20,10 @@ export class YouTuveIframeComponent implements OnInit {
     return this.sanitizer.bypassSecurityTrustResourceUrl(this.data.url) ;
   }
 
+  close() {
+    this.dialogRef.close();
+  }
+
   ngOnInit() {
   }
 
