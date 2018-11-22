@@ -5,7 +5,7 @@ import os
 from werkzeug.utils import secure_filename
 from medical_classifier import MedicalObjectClassifier
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='./client/dist/client/')
 app.config["MONGO_URI"] = "mongodb://soroka-hackathon:a123456@ds247178.mlab.com:47178/heroku_6q3wqvtk"
 app.config['UPLOAD_FOLDER'] = './images_for_classification'
 mongo = PyMongo(app)
@@ -15,7 +15,7 @@ ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
 @app.route('/')
 def home():
-	return render_template('./client/dist/client/index.html')
+	return render_template('index.html')
 
 
 @app.route('/classify', methods=['POST'])
