@@ -15,9 +15,7 @@ ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
 @app.route('/')
 def home():
-	an_incrementing_number = mongo.db.number.find_one_and_update(
-	    {"_id": "the only id"}, {"$inc": {"number": 1}}, upsert=True)['number']
-	return render_template('home.html', number=an_incrementing_number)
+	return render_template('./client/dist/client/index.html', number=an_incrementing_number)
 
 
 @app.route('/classify', methods=['POST'])
