@@ -350,7 +350,7 @@ var VideoGameComponent = /** @class */ (function () {
     };
     VideoGameComponent.prototype.requestCameraAccess = function () {
         var _this = this;
-        navigator.mediaDevices.getUserMedia({ video: true, facingMode: 'environment' })
+        navigator.mediaDevices.getUserMedia({ video: { facingMode: { exact: "environment" } } })
             .then(function (stream) {
             _this.video.nativeElement.srcObject = stream;
         })

@@ -51,7 +51,7 @@ export class VideoGameComponent implements OnInit {
   }
 
   requestCameraAccess() {
-    (navigator.mediaDevices.getUserMedia as any)({ video: true, facingMode: 'environment'})
+    (navigator.mediaDevices.getUserMedia as any)({video: { facingMode: { exact: "environment" } }})
       .then((stream)  => {
 
         this.video.nativeElement.srcObject = stream;
