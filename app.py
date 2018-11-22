@@ -66,27 +66,27 @@ CATEGORY_TO_RESPONSE = {
 	'OxygenMask' : {
 		'name' : 'מסכת חמצן', 
 		'description' : 'כמו מסכה של פורים, רק מביאה לכם עוד חמצן', 
-		'url' : "https://www.youtube.com/embed/oaZsvwfpOgM"
+		'url' : "./assets/Oxygen.mp4"
 		},
 	'Soap' : {
 		'name' : 'סבון', 
 		'description' : 'הוא אמנם אדום או כחול, אבל הוא ממש כמו הסבון בבית. אל תשכחו לשטוף ידיים', 
-		'url' : "https://www.youtube.com/embed/ee1WvpVypa4"
+		'url' : "./assets/Soap.mp4"
 	},
 	'BloodPressure' : {
 		'name' : 'מד לחץ דם', 
 		'description' : 'שמים את מד הלחץ דם כמו שרוול והוא אומר לנו כמה חזק הלב שלנו פועם',
-		'url' : "https://www.youtube.com/embed/n1nN7eASrAs"
+		'url' : "./assets/BloodPressure.mp4"
 	},
 	'Thermometer' : {
 		'name' : 'מדחום', 
 		'description' : 'המדחום מראה את חום הגוף.', 
-		'url' : "https://www.youtube.com/embed/nZc_QknHP54"
+		'url' : "./assets/Thermometer.mp4"
 	},
 	'ECGElectrode' : {
 		'name' : 'מדבקה',
 		'description' : 'כששמים את המדבקה על החזה היא שומעת את הלב ומקליטה', 
-		'url' : "https://www.youtube.com/embed/ts_uCbPqXwM"
+		'url' : "./assets/ECGElectrode.mp4"
 	}
 }
 
