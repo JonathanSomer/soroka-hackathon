@@ -53,7 +53,7 @@ export class AppComponent implements OnInit {
   }
 
   requestCameraAccess() {
-    (navigator.mediaDevices.getUserMedia as any)({ video: true, facingMode: false})
+    (navigator.mediaDevices.getUserMedia as any)({ video: true, facingMode: 'environment'})
       .then((stream)  => {
 
         this.video.nativeElement.srcObject = stream;
