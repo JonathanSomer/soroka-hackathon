@@ -1,11 +1,11 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, send_from_directory
 from flask_pymongo import PyMongo
 from logging.config import dictConfig
 import os
 from werkzeug.utils import secure_filename
 from medical_classifier import MedicalObjectClassifier
 
-app = Flask(__name__, template_folder='./client/dist/client/')
+app = Flask(__name__, template_folder='')
 app.config["MONGO_URI"] = "mongodb://soroka-hackathon:a123456@ds247178.mlab.com:47178/heroku_6q3wqvtk"
 app.config['UPLOAD_FOLDER'] = './images_for_classification'
 mongo = PyMongo(app)
@@ -15,8 +15,11 @@ ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
 @app.route('/')
 def home():
-	return render_template('index.html')
+	return render_template('./client/dist/client/index.html')
 
+@app.route('/client/dist/client/<path:path>')
+def send_js(path):
+    return send_from_directory('./client/dist/client/', path)
 
 @app.route('/classify', methods=['POST'])
 def classify_image():
