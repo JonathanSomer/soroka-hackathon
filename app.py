@@ -54,28 +54,28 @@ def allowed_file(filename):
 
 CATEGORY_TO_RESPONSE = {
 	'OxygenMask' : {
-		'name' : 'OxygenMask', 
-		'description' : 'When you breath through the mask you get more oxygen!', 
+		'name' : 'מסכת חמצן', 
+		'description' : 'כמו מסכה של פורים, רק מביאה לכם עוד חמצן', 
 		'url' : "https://www.youtube.com/embed/oaZsvwfpOgM"
 		},
 	'Soap' : {
-		'name' : 'Soap', 
-		'description' : 'A magical substance which cleans stuff', 
+		'name' : 'סבון', 
+		'description' : 'הוא אמנם אדום או כחול, אבל הוא ממש כמו הסבון בבית. אל תשכחו לשטוף ידיים', 
 		'url' : "https://www.youtube.com/embed/ee1WvpVypa4"
 	},
 	'BloodPressure' : {
-		'name' : 'Blood Pressure Monitors', 
-		'description' : '', 
+		'name' : 'מד לחץ דם', 
+		'description' : 'שמים את מד הלחץ דם כמו שרוול והוא אומר לנו כמה חזק הלב שלנו פועם',
 		'url' : "https://www.youtube.com/embed/n1nN7eASrAs"
 	},
 	'Thermometer' : {
-		'name' : 'Soap', 
-		'description' : 'A magical substance which cleans stuff', 
+		'name' : 'מדחום', 
+		'description' : 'המדחום מראה את חום הגוף.', 
 		'url' : "https://www.youtube.com/embed/nZc_QknHP54"
 	},
 	'ECGElectrode' : {
-		'name' : 'Soap', 
-		'description' : 'A magical substance which cleans stuff', 
+		'name' : 'מדבקה',
+		'description' : 'כששמים את המדבקה על החזה היא שומעת את הלב ומקליטה', 
 		'url' : "https://www.youtube.com/embed/ts_uCbPqXwM"
 	}
 }
