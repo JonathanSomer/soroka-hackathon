@@ -4,8 +4,10 @@ from logging.config import dictConfig
 import os
 from werkzeug.utils import secure_filename
 from medical_classifier import MedicalObjectClassifier
+from flask_cors import CORS
 
 app = Flask(__name__, template_folder='')
+CORS(app)
 app.config["MONGO_URI"] = "mongodb://soroka-hackathon:a123456@ds247178.mlab.com:47178/heroku_6q3wqvtk"
 app.config['UPLOAD_FOLDER'] = './images_for_classification'
 mongo = PyMongo(app)
