@@ -31,6 +31,9 @@ export class AppComponent implements OnInit {
       case 0:
         this.router.navigateByUrl('/employees');
         break;
+      case 2:
+        this.router.navigateByUrl('/about-us');
+        break;
     }
   }
 

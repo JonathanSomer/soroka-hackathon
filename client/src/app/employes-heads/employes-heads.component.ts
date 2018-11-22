@@ -8,7 +8,7 @@ import {MatDialog} from '@angular/material';
   styleUrls: ['./employes-heads.component.scss']
 })
 export class EmployesHeadsComponent implements OnInit {
-
+  public currentEmployee = 1;
   constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
@@ -27,8 +27,19 @@ export class EmployesHeadsComponent implements OnInit {
     });
   }
 
-  clickOnEmployee(employee) {
-    this.openyouTubeMovie(employee.videoUrl, employee.name);
+  swipe(type) {
+    switch (type) {
+      case 'swipeleft':
+        this.currentEmployee--;
+        break;
+      case 'swiperight':
+        this.currentEmployee++;
+        break;
+    }
+  }
+
+  clickOnEmployee() {
+    // this.openyouTubeMovie(employee.videoUrl, employee.name);
   }
 
 

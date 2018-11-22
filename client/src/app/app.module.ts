@@ -8,10 +8,21 @@ import { EmployesHeadsComponent } from './employes-heads/employes-heads.componen
 import { YouTuveIframeComponent } from './you-tuve-iframe/you-tuve-iframe.component';
 import { VideoGameComponent } from './video-game/video-game.component';
 import {RouterModule, Routes} from '@angular/router';
+import * as Hammer from 'hammerjs';
+import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
+import { AboutUsComponent } from './about-us/about-us.component';
+
+export class MyHammerConfig extends HammerGestureConfig  {
+  overrides = <any>{
+    // override hammerjs default configuration
+    'swipe': { direction: Hammer.DIRECTION_ALL  }
+  };
+}
 
 const appRoutes: Routes = [
   { path: 'employees', component: EmployesHeadsComponent },
   { path: 'video-game', component: VideoGameComponent },
+  { path: 'about-us', component: AboutUsComponent },
   { path: '**', component: VideoGameComponent },
   // {
   //   path: 'heroes',
@@ -31,7 +42,8 @@ const appRoutes: Routes = [
     AppComponent,
     EmployesHeadsComponent,
     YouTuveIframeComponent,
-    VideoGameComponent
+    VideoGameComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +59,12 @@ const appRoutes: Routes = [
   entryComponents: [
     YouTuveIframeComponent
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HAMMER_GESTURE_CONFIG,
+      useClass: MyHammerConfig
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
