@@ -23,6 +23,16 @@ def home():
 def send_js(path):
     return send_from_directory('./client/dist/client/', path)
 
+
+@app.route('/assets/<path:path>')
+def send_assets(path):
+    return send_from_directory('./client/dist/client/assets', path)
+
+@app.route('/images/<path:path>')
+def send_images(path):
+    return send_from_directory('./client/dist/client/images', path)
+
+
 @app.route('/classify', methods=['POST'])
 def classify_image():
 	file_path = save_image(request)

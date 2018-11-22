@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <h1 style=\"text-align: center;\">\n    אודות\n  </h1>\n  <p style=\"text-align: right;direction: rtl;\">\n    \"מי זה מה זה\", הינה אפליקציה שנוצרה בהאקטון בבית החולים סורוקה.\n    מטרתינו לייצר סביבה ידידותית ולאפשר לילדים להתחבר לציוד ולאנשים בבית החולים בצורה מסקרנת וכיפית.\n  </p>\n  <h2 style=\"text-align: center;\">\n    הקבוצה\n  </h2>\n  <p style=\"text-align: right;direction: rtl;\">\n    יוסי עינב, יהונתן זומר, עידו קסלר, ד\"ר מנור שפריץ, ליאת טודריס, רויטל גוטרמן, קלאודיו אלתר, אנדי פלקון, סטאס ריבקין.\n  </p>\n</div>\n"
+module.exports = "<div>\r\n  <h1 style=\"text-align: center;\">\r\n    אודות\r\n  </h1>\r\n  <p style=\"text-align: right;direction: rtl;\">\r\n    \"מי זה מה זה\", הינה אפליקציה שנוצרה בהאקטון בבית החולים סורוקה.\r\n    מטרתינו לייצר סביבה ידידותית ולאפשר לילדים להתחבר לציוד ולאנשים בבית החולים בצורה מסקרנת וכיפית.\r\n  </p>\r\n  <h2 style=\"text-align: center;\">\r\n    הקבוצה\r\n  </h2>\r\n  <p style=\"text-align: right;direction: rtl;\">\r\n    יוסי עינב, יהונתן זומר, עידו קסלר, ד\"ר מנור שפריץ, ליאת טודריס, רויטל גוטרמן, קלאודיו אלתר, אנדי פלקון, סטאס ריבקין.\r\n  </p>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -93,7 +93,7 @@ var AboutUsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <div class=\"main\">\n    <router-outlet></router-outlet>\n  </div>\n  <mat-tab-group selectedIndex=\"1\" (selectedIndexChange)=\"changeCurrentTab($event)\">\n    <mat-tab label=\"הצוות המטפל\"></mat-tab>\n    <mat-tab label=\"גלה חפצים סביבך\"></mat-tab>\n    <mat-tab label=\"אודות\"></mat-tab>\n  </mat-tab-group>\n</div>\n"
+module.exports = "<div>\r\n  <div class=\"main\">\r\n    <router-outlet></router-outlet>\r\n  </div>\r\n  <mat-tab-group selectedIndex=\"1\" (selectedIndexChange)=\"changeCurrentTab($event)\">\r\n    <mat-tab label=\"הצוות המטפל\"></mat-tab>\r\n    <mat-tab label=\"גלה חפצים סביבך\"></mat-tab>\r\n    <mat-tab label=\"אודות\"></mat-tab>\r\n  </mat-tab-group>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -297,7 +297,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"employees-container\">\n  <h1>{{ employes[currentEmployee].name }}</h1>\n  <div class=\"employee\" (swipeleft)=\"swipe($event.type)\" (swiperight)=\"swipe($event.type)\">\n    <img [src]=\"employes[currentEmployee].imageUrl\"/>\n  </div>\n\n  <button (click)=\"clickOnEmployee()\" mat-button>\n    נגן וידאו\n    <mat-icon>play_circle_filled</mat-icon>\n  </button>\n</nav>\n"
+module.exports = "<nav class=\"employees-container\">\r\n  <h1>{{ employes[currentEmployee].name }}</h1>\r\n  <div class=\"employee\" (swipeleft)=\"swipe($event.type)\" (swiperight)=\"swipe($event.type)\">\r\n    <img [src]=\"employes[currentEmployee].imageUrl\"/>\r\n  </div>\r\n\r\n  <button (click)=\"clickOnEmployee()\" mat-button>\r\n    נגן וידאו\r\n    <mat-icon>play_circle_filled</mat-icon>\r\n  </button>\r\n</nav>\r\n"
 
 /***/ }),
 
@@ -395,7 +395,7 @@ var EmployesHeadsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"main\">\n  <video #video autoplay></video>\n  <button (click)=\"sendCurrentFrame()\">\n    <img src=\"./assets/search.svg\"/> Search Now!\n  </button>\n</div>\n"
+module.exports = "<div class=\"main\">\r\n  <video #video autoplay></video>\r\n  <button (click)=\"sendCurrentFrame()\">\r\n    <img src=\"./assets/search.svg\"/> Search Now!\r\n  </button>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -513,7 +513,7 @@ var VideoGameComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <p *ngIf=\"data.title\">{{data.title}}</p>\n  <iframe width=\"100%\" height=\"400px\"\n          [src]=\"iframeUrl()\"\n          frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen>\n\n  </iframe>\n</div>\n"
+module.exports = "<div>\r\n  <p *ngIf=\"data.title\">{{data.title}}</p>\r\n  <iframe width=\"100%\" height=\"400px\"\r\n          [src]=\"iframeUrl()\"\r\n          frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen>\r\n\r\n  </iframe>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -647,7 +647,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Volumes/dev/soroka-hackathon/client/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\kessi\Repo\soroka-hackathon\client\src\main.ts */"./src/main.ts");
 
 
 /***/ })
