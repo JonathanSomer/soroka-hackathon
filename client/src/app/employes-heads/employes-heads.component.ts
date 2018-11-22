@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-employes-heads',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./employes-heads.component.scss']
 })
 export class EmployesHeadsComponent implements OnInit {
+  @Output() clickOnEmployee = new EventEmitter();
 
   public employes = [
     { name: 'קלאודיו אלתר', title: 'אח', imageUrl: 'https://s3.amazonaws.com/yossi-eynav-uploads/cloudyo.jpg', videoUrl: 'https://youtu.be/V-7pTTNvUs8'},

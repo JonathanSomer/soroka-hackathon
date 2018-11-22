@@ -2,19 +2,25 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule, MatDialogModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { EmployesHeadsComponent } from './employes-heads/employes-heads.component';
+import { YouTuveIframeComponent } from './you-tuve-iframe/you-tuve-iframe.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployesHeadsComponent
+    EmployesHeadsComponent,
+    YouTuveIframeComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatButtonModule, MatCheckboxModule
+    MatButtonModule, MatCheckboxModule,
+    MatDialogModule
+  ],
+  entryComponents: [
+    YouTuveIframeComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
