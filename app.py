@@ -29,7 +29,7 @@ def classify_image():
 	classifier = MedicalObjectClassifier()
 	category = classifier.classify(file_path)
 	os.remove(file_path)
-	return jsonify({ 'name' : category, 'description' : 'bla bla bla', 'url' : 'www.youtube.com'})
+	return map_category_to_response(category)
 
 
 
@@ -51,5 +51,19 @@ def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-def map_category_to_response():
-	cat
+
+CATEGORY_TO_RESPONSE = {
+	'OxygenMask' : {
+		'name' : 'OxygenMask', 
+		'description' : 'When you breath through the mask you get more oxygen!', 
+		'url' : 'https://youtu.be/oaZsvwfpOgM'
+		},
+	'Soap' : {
+		'name' : 'Soap', 
+		'description' : 'A magical substance which cleans stuff', 
+		'url' : 'https://youtu.be/ee1WvpVypa4'
+	}
+}
+
+def map_category_to_response(category):
+	return jsonify(CATEGORY_TO_RESPONSE[category])
