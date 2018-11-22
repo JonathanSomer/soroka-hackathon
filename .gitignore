@@ -1,4 +1,4 @@
 *.pyc
-
+loop_deployment.sh
 #Ido's Env
 soroka-hackathon/**
