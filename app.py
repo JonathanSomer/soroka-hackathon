@@ -25,7 +25,7 @@ def send_js(path):
 
 
 @app.route('/assets/<path:path>')
-def send_js(path):
+def send_assets(path):
     return send_from_directory('./client/dist/client/assets', path)
 
 
