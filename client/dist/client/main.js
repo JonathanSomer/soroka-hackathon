@@ -106,7 +106,7 @@ var AppComponent = /** @class */ (function () {
     };
     AppComponent.prototype.requestCameraAccess = function () {
         var _this = this;
-        navigator.mediaDevices.getUserMedia({ video: true, facingMode: false })
+        navigator.mediaDevices.getUserMedia({ video: true, facingMode: 'environment' })
             .then(function (stream) {
             _this.video.nativeElement.srcObject = stream;
         })
