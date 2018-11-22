@@ -1,6 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatDialog} from '@angular/material';
 import {YouTuveIframeComponent} from './you-tuve-iframe/you-tuve-iframe.component';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -9,11 +10,9 @@ import {YouTuveIframeComponent} from './you-tuve-iframe/you-tuve-iframe.componen
 })
 export class AppComponent implements OnInit {
   srcObject: null;
-  @ViewChild('video') video;
 
-  constructor(public dialog: MatDialog) {
+  constructor(public dialog: MatDialog, public router: Router) {}
 
-  }
 
   openyouTubeMovie(url: string, title: string) {
     const dialogRef = this.dialog.open(YouTuveIframeComponent, {
@@ -22,50 +21,20 @@ export class AppComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
-    this.requestCameraAccess();
-  }
+  ngOnInit(): void {}
 
-  sendCurrentFrame() {
-    const videoWidth = this.video.nativeElement.videoWidth;
-    const timesBig = videoWidth / 256;
-
-    const canvas = document.createElement('canvas');
-    const canvasHeight = videoWidth / timesBig;
-    const canvasWidth = this.video.nativeElement.videoHeight / timesBig;
-
-    canvas.width = canvasWidth;
-    canvas.height = canvasHeight;
-
-    canvas.getContext('2d').drawImage(this.video.nativeElement, 0, 0, canvasWidth, canvasHeight);
-    canvas.toBlob((blob) => {
-      const f = new File([blob], 'image.jpeg', {type:"image/jpeg"});
-
-      const formData = new FormData();
-      formData.append('image', f);
-
-      fetch('https://soroka-hackathon.herokuapp.com/classify', { method: 'POST', body: formData})
-        .then(r => r.json())
-        .then((data) => {
-           this.openyouTubeMovie( data.url, `${data.name} - ${data.description}`);
-        });
-     }, 'image/jpeg');
-  }
-
-  requestCameraAccess() {
-    (navigator.mediaDevices.getUserMedia as any)({ video: true, facingMode: false})
-      .then((stream)  => {
-
-        this.video.nativeElement.srcObject = stream;
-      })
-      .catch((err)  => {
-        console.error(err);
-        /* handle the error */
-      });
+  changeCurrentTab(index) {
+    switch (index) {
+      case 1:
+        this.router.navigateByUrl('/video-game');
+        break;
+      case 0:
+        this.router.navigateByUrl('/employees');
+        break;
+    }
   }
 
   onEmployeeClick(employee) {
     this.openyouTubeMovie(employee.videoUrl, employee.name);
   }
-
 }

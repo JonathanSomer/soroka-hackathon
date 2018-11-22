@@ -1,4 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {YouTuveIframeComponent} from '../you-tuve-iframe/you-tuve-iframe.component';
+import {MatDialog} from '@angular/material';
 
 @Component({
   selector: 'app-employes-heads',
@@ -6,7 +8,11 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
   styleUrls: ['./employes-heads.component.scss']
 })
 export class EmployesHeadsComponent implements OnInit {
-  @Output() clickOnEmployee = new EventEmitter();
+
+  constructor(public dialog: MatDialog) { }
+
+  ngOnInit() {
+  }
 
   public employes = [
     { name: 'קלאודיו אלתר', title: 'אח', imageUrl: 'https://s3.amazonaws.com/yossi-eynav-uploads/cloudyo.jpg', videoUrl: 'https://youtu.be/V-7pTTNvUs8'},
@@ -14,9 +20,17 @@ export class EmployesHeadsComponent implements OnInit {
     { name: 'מנור שפריץ', title: 'רופא', imageUrl: 'https://s3.amazonaws.com/yossi-eynav-uploads/cloudyo.jpg', videoUrl: 'https://youtu.be/V-7pTTNvUs8'},
   ];
 
-  constructor() { }
-
-  ngOnInit() {
+  openyouTubeMovie(url: string, title: string) {
+    const dialogRef = this.dialog.open(YouTuveIframeComponent, {
+      width: '400px',
+      data: {url: url, title}
+    });
   }
+
+  clickOnEmployee(employee) {
+    this.openyouTubeMovie(employee.videoUrl, employee.name);
+  }
+
+
 
 }
