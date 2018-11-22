@@ -66,12 +66,12 @@ CATEGORY_TO_RESPONSE = {
 	'BloodPressure' : {
 		'name' : 'Blood Pressure Monitors', 
 		'description' : '', 
-		'url' : ""
+		'url' : "https://www.youtube.com/embed/n1nN7eASrAs"
 	},
 	'Thermometer' : {
 		'name' : 'Soap', 
 		'description' : 'A magical substance which cleans stuff', 
-		'url' : ""
+		'url' : "https://www.youtube.com/embed/nZc_QknHP54"
 	},
 	'ECGElectrode' : {
 		'name' : 'Soap', 
