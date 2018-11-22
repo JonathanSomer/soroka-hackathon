@@ -54,28 +54,28 @@ def allowed_file(filename):
 
 CATEGORY_TO_RESPONSE = {
 	'OxygenMask' : {
-		'name' : 'OxygenMask', 
-		'description' : 'When you breath through the mask you get more oxygen!', 
+		'name' : 'מסכת חמצן', 
+		'description' : 'כמו מסכה של פורים, רק מביאה לכם עוד חמצן', 
 		'url' : "https://www.youtube.com/embed/oaZsvwfpOgM"
 		},
 	'Soap' : {
-		'name' : 'Soap', 
-		'description' : 'A magical substance which cleans stuff', 
+		'name' : 'סבון', 
+		'description' : 'הוא אמנם אדום או כחול, אבל הוא ממש כמו הסבון בבית. אל תשכחו לשטוף ידיים', 
 		'url' : "https://www.youtube.com/embed/ee1WvpVypa4"
 	},
 	'BloodPressure' : {
-		'name' : 'Blood Pressure Monitors', 
-		'description' : '', 
+		'name' : 'מד לחץ דם', 
+		'description' : 'השרו',
 		'url' : ""
 	},
 	'Thermometer' : {
-		'name' : 'Soap', 
+		'name' : 'מדחום', 
 		'description' : 'A magical substance which cleans stuff', 
 		'url' : ""
 	},
 	'ECGElectrode' : {
-		'name' : 'Soap', 
-		'description' : 'A magical substance which cleans stuff', 
+		'name' : 'מדבקה', 
+		'description' : 'כששמים את המדבקה על החזה היא שומעת את הלב ומקליטה', 
 		'url' : "https://www.youtube.com/embed/ts_uCbPqXwM"
 	}
 }
