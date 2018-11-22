@@ -28,18 +28,23 @@ export class EmployesHeadsComponent implements OnInit {
   }
 
   swipe(type) {
+    console.log(type);
     switch (type) {
-      case 'swipeleft':
-        this.currentEmployee--;
+      case 'swipeleft': {
+        const index = this.currentEmployee - 1;
+        this.currentEmployee = index >= 0 ? index : this.employes.length - 1;
         break;
-      case 'swiperight':
-        this.currentEmployee++;
+      }
+      case 'swiperight': {
+        const index = this.currentEmployee + 1;
+        this.currentEmployee = index <= this.employes.length - 1 ? index : 0;
         break;
+      }
     }
   }
 
   clickOnEmployee() {
-    // this.openyouTubeMovie(employee.videoUrl, employee.name);
+    this.openyouTubeMovie(this.employes[this.currentEmployee].videoUrl, this.employes[this.currentEmployee].name);
   }
 
 

@@ -1,5 +1,11 @@
 <nav class="employees-container">
-  <div (click)="clickOnEmployee()" class="employee" (swipeleft)="swipe('', $event.type)" (swiperight)="swipe('', $event.type)">
-      <img [src]="employes[currentEmployee].imageUrl"/>
+  <h1>{{ employes[currentEmployee].name }}</h1>
+  <div (click)="clickOnEmployee()" class="employee" (swipeleft)="swipe($event.type)" (swiperight)="swipe($event.type)">
+    <img [src]="employes[currentEmployee].imageUrl"/>
   </div>
+
+  <button (click)="clickOnEmployee()" mat-button>
+    נגן וידאו
+    <mat-icon>play_circle_filled</mat-icon>
+  </button>
 </nav>
