@@ -28,6 +28,10 @@ def send_js(path):
 def send_assets(path):
     return send_from_directory('./client/dist/client/assets', path)
 
+@app.route('/images/<path:path>')
+def send_images(path):
+    return send_from_directory('./client/dist/client/images', path)
+
 
 @app.route('/classify', methods=['POST'])
 def classify_image():

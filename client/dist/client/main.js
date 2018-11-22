@@ -93,7 +93,7 @@ var AboutUsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n  <div class=\"main\">\r\n    <router-outlet></router-outlet>\r\n  </div>\r\n  <mat-tab-group selectedIndex=\"1\" (selectedIndexChange)=\"changeCurrentTab($event)\">\r\n    <mat-tab label=\"First\"></mat-tab>\r\n    <mat-tab label=\"Second\"></mat-tab>\r\n    <mat-tab label=\"Third\"></mat-tab>\r\n  </mat-tab-group>\r\n</div>\r\n"
+module.exports = "<div>\r\n  <div class=\"main\">\r\n    <router-outlet></router-outlet>\r\n  </div>\r\n  <mat-tab-group selectedIndex=\"1\" (selectedIndexChange)=\"changeCurrentTab($event)\">\r\n    <mat-tab label=\"הצוות המטפל\"></mat-tab>\r\n    <mat-tab label=\"גלה חפצים סביבך\"></mat-tab>\r\n    <mat-tab label=\"אודות\"></mat-tab>\r\n  </mat-tab-group>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -104,7 +104,7 @@ module.exports = "<div>\r\n  <div class=\"main\">\r\n    <router-outlet></router
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "mat-tab-group {\n  position: absolute;\n  bottom: 0; }\n"
 
 /***/ }),
 
