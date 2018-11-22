@@ -19,7 +19,7 @@ class MedicalObjectClassifier:
         try:
             conn = http.client.HTTPSConnection('southcentralus.api.cognitive.microsoft.com')
             image = open(image_file_path, 'rb').read()
-            conn.request("POST", "/customvision/v2.0/Prediction/88b0aa42-36e8-4305-b26f-4bf03106c684/image?iterationId=73089c8d-5168-4b48-94a5-76c177c025cf", image, self._headers)
+            conn.request("POST", "/customvision/v2.0/Prediction/88b0aa42-36e8-4305-b26f-4bf03106c684/image", image, self._headers)
             response = conn.getresponse()
             data = json.loads(response.read())
             filtered = [x['tagName'] for x in data['predictions'] if x['probability'] > 0.7]

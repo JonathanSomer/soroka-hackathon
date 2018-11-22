@@ -65,16 +65,16 @@ CATEGORY_TO_RESPONSE = {
 	},
 	'BloodPressure' : {
 		'name' : 'מד לחץ דם', 
-		'description' : 'השרו',
-		'url' : ""
+		'description' : 'שמים את מד הלחץ דם כמו שרוול והוא אומר לנו כמה חזק הלב שלנו פועם',
+		'url' : "https://www.youtube.com/embed/n1nN7eASrAs"
 	},
 	'Thermometer' : {
 		'name' : 'מדחום', 
-		'description' : 'A magical substance which cleans stuff', 
-		'url' : ""
+		'description' : 'המדחום מראה את חום הגוף.', 
+		'url' : "https://www.youtube.com/embed/nZc_QknHP54"
 	},
 	'ECGElectrode' : {
-		'name' : 'מדבקה', 
+		'name' : 'מדבקה',
 		'description' : 'כששמים את המדבקה על החזה היא שומעת את הלב ומקליטה', 
 		'url' : "https://www.youtube.com/embed/ts_uCbPqXwM"
 	}

@@ -1,9 +1,29 @@
 button {
   position: absolute;
-  width: 100px;
   left: 0;
-  bottom: 0;
-  color: red;
+  bottom: 13px;
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  background: rgba(0,0,0,0.6);
+  border: none;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: all 1s;
+  outline: 0;
+
+  img {
+    width: 40px;
+  }
+
+  &:active {
+    background: rgba(189, 185, 185, 0.45);
+  }
 }
 
 video {
