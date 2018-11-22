@@ -1,5 +1,5 @@
 <nav class="employees-container">
-  <div (click)="clickOnEmployee.next(employe)" *ngFor="let employe of employes" class="employee">
+  <div (click)="clickOnEmployee(employe)" *ngFor="let employe of employes" class="employee">
     <img [src]="employe.imageUrl"/>
   </div>
 </nav>

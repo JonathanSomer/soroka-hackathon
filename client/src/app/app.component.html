@@ -1,7 +1,10 @@
 <div>
   <div class="main">
-    <video #video autoplay></video>
-    <button (click)="sendCurrentFrame()"> Send Frame!</button>
+    <router-outlet></router-outlet>
   </div>
-  <app-employes-heads (clickOnEmployee)="onEmployeeClick($event)"></app-employes-heads>
+  <mat-tab-group selectedIndex="1" (selectedIndexChange)="changeCurrentTab($event)" headerPosition="below">
+    <mat-tab label="First"></mat-tab>
+    <mat-tab label="Second" ></mat-tab>
+    <mat-tab label="Third"></mat-tab>
+  </mat-tab-group>
 </div>
