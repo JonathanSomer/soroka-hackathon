@@ -56,12 +56,12 @@ CATEGORY_TO_RESPONSE = {
 	'OxygenMask' : {
 		'name' : 'OxygenMask', 
 		'description' : 'When you breath through the mask you get more oxygen!', 
-		'url' : 'https://youtu.be/oaZsvwfpOgM'
+		'url' : "https://www.youtube.com/embed/oaZsvwfpOgM"
 		},
 	'Soap' : {
 		'name' : 'Soap', 
 		'description' : 'A magical substance which cleans stuff', 
-		'url' : 'https://youtu.be/ee1WvpVypa4'
+		'url' : "https://www.youtube.com/embed/ee1WvpVypa4"
 	}
 }
 
