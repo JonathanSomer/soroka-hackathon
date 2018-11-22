@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  <div>\r\n    <h1 style=\"text-align: center;\">\r\n      אודות\r\n    </h1>\r\n    <h2 style=\"text-align: right;direction: rtl;\">\r\n      \"מי זה מה זה\", הינה אפליקציה שנוצרה בהאקטון בבית החולים סורוקה.\r\n       מטרתינו לייצר סביבה ידידותית ולאפשר לילדים להתחבר לציוד ולאנשים בבית החולים בצורה מסקרנת וכיפית.\r\n    </h2>\r\n    <h1 style=\"text-align: center;\">\r\n      הקבוצה\r\n    </h1>\r\n    <h2 style=\"text-align: right;direction: rtl;\">\r\n      יוסי עינב, יהונתן זומר, עידו קסלר, ד\"ר מנור שפריץ, ליאת טודריס, רויטל גוטרמן, קלאודיו אלתר, אנדי פלקון, סטאס ריבקין.\r\n    </h2>\r\n  </div>\r\n</p>\r\n"
+module.exports = "<div>\n  <h1 style=\"text-align: center;\">\n    אודות\n  </h1>\n  <p style=\"text-align: right;direction: rtl;\">\n    \"מי זה מה זה\", הינה אפליקציה שנוצרה בהאקטון בבית החולים סורוקה.\n    מטרתינו לייצר סביבה ידידותית ולאפשר לילדים להתחבר לציוד ולאנשים בבית החולים בצורה מסקרנת וכיפית.\n  </p>\n  <h2 style=\"text-align: center;\">\n    הקבוצה\n  </h2>\n  <p style=\"text-align: right;direction: rtl;\">\n    יוסי עינב, יהונתן זומר, עידו קסלר, ד\"ר מנור שפריץ, ליאת טודריס, רויטל גוטרמן, קלאודיו אלתר, אנדי פלקון, סטאס ריבקין.\n  </p>\n</div>\n"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = "<p>\r\n  <div>\r\n    <h1 style=\"text-align: center;\">\r\n  
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "div {\n  padding: 10px; }\n\nh2, h1 {\n  margin-top: 15px; }\n"
 
 /***/ }),
 
@@ -93,7 +93,7 @@ var AboutUsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n  <div class=\"main\">\r\n    <router-outlet></router-outlet>\r\n  </div>\r\n  <mat-tab-group selectedIndex=\"1\" (selectedIndexChange)=\"changeCurrentTab($event)\" headerPosition=\"below\">\r\n    <mat-tab label=\"First\"></mat-tab>\r\n    <mat-tab label=\"Second\" ></mat-tab>\r\n    <mat-tab label=\"Third\"></mat-tab>\r\n  </mat-tab-group>\r\n</div>\r\n"
+module.exports = "<div>\n  <div class=\"main\">\n    <router-outlet></router-outlet>\n  </div>\n  <mat-tab-group selectedIndex=\"1\" (selectedIndexChange)=\"changeCurrentTab($event)\">\n    <mat-tab label=\"First\"></mat-tab>\n    <mat-tab label=\"Second\"></mat-tab>\n    <mat-tab label=\"Third\"></mat-tab>\n  </mat-tab-group>\n</div>\n"
 
 /***/ }),
 
@@ -266,6 +266,8 @@ var AppModule = /** @class */ (function () {
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatButtonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatCheckboxModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatDialogModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatTabsModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatIconModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatButtonModule"],
                 _angular_router__WEBPACK_IMPORTED_MODULE_8__["RouterModule"].forRoot(appRoutes, { enableTracing: true, useHash: true } // <-- debugging purposes only
                 )
             ],
@@ -295,7 +297,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"employees-container\">\r\n  <div (click)=\"clickOnEmployee()\" class=\"employee\" (swipeleft)=\"swipe('', $event.type)\" (swiperight)=\"swipe('', $event.type)\">\r\n      <img [src]=\"employes[currentEmployee].imageUrl\"/>\r\n  </div>\r\n</nav>\r\n"
+module.exports = "<nav class=\"employees-container\">\n  <h1>{{ employes[currentEmployee].name }}</h1>\n  <div class=\"employee\" (swipeleft)=\"swipe($event.type)\" (swiperight)=\"swipe($event.type)\">\n    <img [src]=\"employes[currentEmployee].imageUrl\"/>\n  </div>\n\n  <button (click)=\"clickOnEmployee()\" mat-button>\n    נגן וידאו\n    <mat-icon>play_circle_filled</mat-icon>\n  </button>\n</nav>\n"
 
 /***/ }),
 
@@ -306,7 +308,7 @@ module.exports = "<nav class=\"employees-container\">\r\n  <div (click)=\"clickO
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".employee {\n  display: inline-block;\n  float: left;\n  margin-left: 10px; }\n  .employee img {\n    width: 80px;\n    height: 80px;\n    border-radius: 100%; }\n  .employees-container {\n  height: 100px;\n  display: flex;\n  overflow-x: scroll;\n  align-items: center; }\n"
+module.exports = ".employee {\n  display: block;\n  width: 100%;\n  background-image: url('client/dist/client/hospital_room.png');\n  background-size: cover; }\n  .employee img {\n    width: 100%; }\n  .employees-container {\n  height: 100%;\n  display: flex;\n  flex-flow: column;\n  align-items: center;\n  justify-content: center; }\n  h1 {\n  font-size: 30px;\n  margin-bottom: 20px; }\n  button {\n  direction: rtl;\n  font-size: 18px;\n  font-weight: 500; }\n"
 
 /***/ }),
 
@@ -354,17 +356,22 @@ var EmployesHeadsComponent = /** @class */ (function () {
         });
     };
     EmployesHeadsComponent.prototype.swipe = function (type) {
+        console.log(type);
         switch (type) {
-            case 'swipeleft':
-                this.currentEmployee--;
+            case 'swipeleft': {
+                var index = this.currentEmployee - 1;
+                this.currentEmployee = index >= 0 ? index : this.employes.length - 1;
                 break;
-            case 'swiperight':
-                this.currentEmployee++;
+            }
+            case 'swiperight': {
+                var index = this.currentEmployee + 1;
+                this.currentEmployee = index <= this.employes.length - 1 ? index : 0;
                 break;
+            }
         }
     };
     EmployesHeadsComponent.prototype.clickOnEmployee = function () {
-        // this.openyouTubeMovie(employee.videoUrl, employee.name);
+        this.openyouTubeMovie(this.employes[this.currentEmployee].videoUrl, this.employes[this.currentEmployee].name);
     };
     EmployesHeadsComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -388,7 +395,7 @@ var EmployesHeadsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"main\">\r\n  <video #video autoplay></video>\r\n  <button (click)=\"sendCurrentFrame()\">\r\n    <img src=\"./assets/search.svg\"/> Search Now!\r\n  </button>\r\n</div>\r\n"
+module.exports = "<div class=\"main\">\n  <video #video autoplay></video>\n  <button (click)=\"sendCurrentFrame()\">\n    <img src=\"./assets/search.svg\"/> Search Now!\n  </button>\n</div>\n"
 
 /***/ }),
 
@@ -506,7 +513,7 @@ var VideoGameComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n  <p *ngIf=\"data.title\">{{data.title}}</p>\r\n  <iframe width=\"100%\" height=\"400px\"\r\n          [src]=\"iframeUrl()\"\r\n          frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen>\r\n\r\n  </iframe>\r\n</div>\r\n"
+module.exports = "<div>\n  <p *ngIf=\"data.title\">{{data.title}}</p>\n  <iframe width=\"100%\" height=\"400px\"\n          [src]=\"iframeUrl()\"\n          frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen>\n\n  </iframe>\n</div>\n"
 
 /***/ }),
 
@@ -613,21 +620,21 @@ var environment = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser-dynamic */ "./node_modules/@angular/platform-browser-dynamic/fesm5/platform-browser-dynamic.js");
-/* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app/app.module */ "./src/app/app.module.ts");
-/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./environments/environment */ "./src/environments/environment.ts");
-/* harmony import */ var hammerjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! hammerjs */ "./node_modules/hammerjs/hammer.js");
-/* harmony import */ var hammerjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(hammerjs__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var hammerjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! hammerjs */ "./node_modules/hammerjs/hammer.js");
+/* harmony import */ var hammerjs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(hammerjs__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser-dynamic */ "./node_modules/@angular/platform-browser-dynamic/fesm5/platform-browser-dynamic.js");
+/* harmony import */ var _app_app_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app/app.module */ "./src/app/app.module.ts");
+/* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./environments/environment */ "./src/environments/environment.ts");
 
 
 
 
 
-if (_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].production) {
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["enableProdMode"])();
+if (_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].production) {
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["enableProdMode"])();
 }
-Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_2__["AppModule"])
+Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_3__["AppModule"])
     .catch(function (err) { return console.log(err); });
 
 
@@ -640,7 +647,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\kessi\Repo\soroka-hackathon\client\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Volumes/dev/soroka-hackathon/client/src/main.ts */"./src/main.ts");
 
 
 /***/ })
