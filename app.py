@@ -62,6 +62,21 @@ CATEGORY_TO_RESPONSE = {
 		'name' : 'Soap', 
 		'description' : 'A magical substance which cleans stuff', 
 		'url' : "https://www.youtube.com/embed/ee1WvpVypa4"
+	},
+	'BloodPressure' : {
+		'name' : 'Blood Pressure Monitors', 
+		'description' : '', 
+		'url' : ""
+	},
+	'Thermometer' : {
+		'name' : 'Soap', 
+		'description' : 'A magical substance which cleans stuff', 
+		'url' : ""
+	},
+	'ECGElectrode' : {
+		'name' : 'Soap', 
+		'description' : 'A magical substance which cleans stuff', 
+		'url' : "https://www.youtube.com/embed/ts_uCbPqXwM"
 	}
 }
 

@@ -51,13 +51,22 @@ export class VideoGameComponent implements OnInit {
   }
 
   requestCameraAccess() {
-    (navigator.mediaDevices.getUserMedia as any)({video: { facingMode: { exact: "environment" } }})
+    (navigator.mediaDevices.getUserMedia as any)({video: { facingMode: { exact: 'environment' } }})
       .then((stream)  => {
 
         this.video.nativeElement.srcObject = stream;
       })
-      .catch((err)  => {
-        console.error(err);
+      .catch(()  => {
+        (navigator.mediaDevices.getUserMedia as any)({video: true })
+          .then((stream)  => {
+
+            this.video.nativeElement.srcObject = stream;
+          })
+          .catch((err)  => {
+            console.error(err);
+            /* handle the error */
+          });
+
         /* handle the error */
       });
   }
