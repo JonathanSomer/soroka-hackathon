@@ -2,7 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {MatButtonModule, MatCheckboxModule, MatDialogModule, MatIconModule, MatTableModule, MatTabsModule} from '@angular/material';
+import {
+  MatButtonModule,
+  MatCheckboxModule,
+  MatDialogModule,
+  MatIconModule,
+  MatMenuModule,
+  MatTableModule,
+  MatTabsModule
+} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { EmployesHeadsComponent } from './employes-heads/employes-heads.component';
 import { YouTuveIframeComponent } from './you-tuve-iframe/you-tuve-iframe.component';
@@ -51,6 +59,7 @@ const appRoutes: Routes = [
     MatButtonModule, MatCheckboxModule,
     MatDialogModule,
     MatTabsModule,
+    MatMenuModule,
     MatIconModule,
     MatButtonModule,
     RouterModule.forRoot(
