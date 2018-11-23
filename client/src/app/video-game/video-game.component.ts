@@ -56,7 +56,7 @@ export class VideoGameComponent implements OnInit {
         .then((data) => {
           this.openyouTubeMovie( data.url, `${data.name} - ${data.description}`);
         }).catch((e) => {
-          this.snackBar.open('שגיאה. נסה שנית', null, { duration: 3000 });
+          this.snackBar.open('שגיאה. נסה שנית', null, { duration: 2000 });
         });
     }, 'image/jpeg');
   }
