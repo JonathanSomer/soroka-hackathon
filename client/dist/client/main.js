@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n  <h1 style=\"text-align: center;\">\r\n    אודות\r\n  </h1>\r\n  <p style=\"text-align: right;direction: rtl;\">\r\n    \"מי זה מה זה\", הינה אפליקציה שנוצרה בהאקטון בבית החולים סורוקה.\r\n    מטרתינו לייצר סביבה ידידותית ולאפשר לילדים להתחבר לציוד ולאנשים בבית החולים בצורה מסקרנת וכיפית.\r\n  </p>\r\n  <h2 style=\"text-align: center;\">\r\n    הקבוצה\r\n  </h2>\r\n  <p style=\"text-align: right;direction: rtl;\">\r\n    יוסי עינב, יהונתן זומר, עידו קסלר, ד\"ר מנור שפריץ, ליאת טודריס, רויטל גוטרמן, קלאודיו אלתר, אנדי פלקון, סטאס ריבקין.\r\n  </p>\r\n</div>\r\n"
+module.exports = "<div>\n  <h1 style=\"text-align: center;\">\n    אודות\n  </h1>\n  <p style=\"text-align: right;direction: rtl;\">\n    \"מי זה מה זה\", הינה אפליקציה שנוצרה בהאקטון בבית החולים סורוקה.\n    מטרתינו לייצר סביבה ידידותית ולאפשר לילדים להתחבר לציוד ולאנשים בבית החולים בצורה מסקרנת וכיפית.\n  </p>\n  <h2 style=\"text-align: center;\">\n    הקבוצה\n  </h2>\n  <p style=\"text-align: right;direction: rtl;\">\n    יוסי עינב, יהונתן זומר, עידו קסלר, ד\"ר מנור שפריץ, ליאת טודריס, רויטל גוטרמן, קלאודיו אלתר, אנדי פלקון, סטאס ריבקין.\n  </p>\n</div>\n"
 
 /***/ }),
 
@@ -93,7 +93,7 @@ var AboutUsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n  <div class=\"main\">\r\n    <router-outlet></router-outlet>\r\n  </div>\r\n  <mat-tab-group selectedIndex=\"1\" (selectedIndexChange)=\"changeCurrentTab($event)\">\r\n    <mat-tab label=\"הצוות המטפל\"></mat-tab>\r\n    <mat-tab label=\"גלה חפצים סביבך\"></mat-tab>\r\n    <mat-tab label=\"אודות\"></mat-tab>\r\n  </mat-tab-group>\r\n</div>\r\n"
+module.exports = "<div>\n  <div class=\"main\">\n    <router-outlet></router-outlet>\n  </div>\n\n  <div style=\"\n    position: absolute;\n    z-index: 1;\n    top: 10px;\n    display: flex;\n    left: 0;\n    align-items: center;\n    width: 100%;\n    justify-content: space-between;\n    padding: 0 20px;\n    box-sizing: border-box;\n    text-align: center;\">\n\n    <button class=\"main-menu\" mat-button [matMenuTriggerFor]=\"menu\">\n      <mat-icon>menu</mat-icon>\n      תפריט\n    </button>\n    <mat-menu #menu=\"matMenu\">\n      <button mat-menu-item>\n        <a routerLink=\"/employees\"  mat-menu-item routerLinkActive=\"active\">הצוות המטפל</a>\n      </button>\n      <button mat-menu-item>\n        <a routerLink=\"/video-game\"  mat-menu-item routerLinkActive=\"active\">גלה את החפצים סביבך</a>\n      </button>\n      <button mat-menu-item>\n        <a routerLink=\"/about-us\"  mat-menu-item routerLinkActive=\"active\">אודות</a>\n      </button>\n    </mat-menu>\n\n    <img src=\"./images/logo.png\" style=\" width: 140px;\">\n\n  </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -104,7 +104,7 @@ module.exports = "<div>\r\n  <div class=\"main\">\r\n    <router-outlet></router
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "mat-tab-group {\n  position: absolute;\n  bottom: 0; }\n\n.main {\n  background-image: url('client/dist/client/bg.jpg');\n  background-size: cover; }\n\np {\n  font-family: 'Open Sans', sans-serif; }\n"
+module.exports = "mat-tab-group {\n  position: absolute;\n  bottom: 0; }\n\n.main-menu {\n  background: white; }\n\n.main {\n  background-image: url('client/dist/client/bg.jpg');\n  background-size: cover; }\n\np {\n  font-family: 'Open Sans', sans-serif; }\n"
 
 /***/ }),
 
@@ -265,6 +265,7 @@ var AppModule = /** @class */ (function () {
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatButtonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatCheckboxModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatDialogModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatTabsModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatMenuModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatIconModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatButtonModule"],
                 _angular_router__WEBPACK_IMPORTED_MODULE_8__["RouterModule"].forRoot(appRoutes, { enableTracing: true, useHash: true } // <-- debugging purposes only
@@ -296,7 +297,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"employees-container\">\r\n  <h1>{{ employes[currentEmployee].name }}</h1>\r\n  <div class=\"employee\" (swipeleft)=\"swipe($event.type)\" (swiperight)=\"swipe($event.type)\">\r\n    <img [src]=\"employes[currentEmployee].imageUrl\"/>\r\n  </div>\r\n\r\n  <button (click)=\"clickOnEmployee()\" mat-button>\r\n    נגן וידאו\r\n    <mat-icon>play_circle_filled</mat-icon>\r\n  </button>\r\n</nav>\r\n"
+module.exports = "<nav class=\"employees-container\">\n  <h1>{{ employes[currentEmployee].name }}</h1>\n  <div class=\"employee\" (swipeleft)=\"swipe($event.type)\" (swiperight)=\"swipe($event.type)\">\n    <img [src]=\"employes[currentEmployee].imageUrl\"/>\n  </div>\n\n  <button (click)=\"clickOnEmployee()\" mat-button>\n    נגן וידאו\n    <mat-icon>play_circle_filled</mat-icon>\n  </button>\n</nav>\n"
 
 /***/ }),
 
@@ -307,7 +308,7 @@ module.exports = "<nav class=\"employees-container\">\r\n  <h1>{{ employes[curre
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".employee {\n  display: block;\n  width: 100%;\n  background-image: url('client/dist/client/hospital_room.png');\n  background-size: cover; }\n  .employee img {\n    width: 100%; }\n  .employees-container {\n  height: 100%;\n  display: flex;\n  flex-flow: column;\n  align-items: center;\n  justify-content: center; }\n  h1 {\n  font-size: 30px;\n  margin-bottom: 20px; }\n  button {\n  direction: rtl;\n  font-size: 18px;\n  font-weight: 500; }\n"
+module.exports = ".employee {\n  display: block;\n  text-align: center;\n  width: 100%;\n  background-image: url('client/dist/client/hospital_room.png');\n  background-size: cover; }\n  .employee img {\n    width: 100%;\n    max-width: 400px; }\n  .employees-container {\n  height: 100%;\n  display: flex;\n  flex-flow: column;\n  align-items: center;\n  justify-content: center; }\n  h1 {\n  font-size: 30px;\n  margin-bottom: 20px; }\n  button {\n  direction: rtl;\n  font-size: 18px;\n  font-weight: 500; }\n"
 
 /***/ }),
 
@@ -395,7 +396,7 @@ var EmployesHeadsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"main\">\r\n  <video #video autoplay></video>\r\n  <button (click)=\"sendCurrentFrame()\">\r\n    חפש עכשיו! <img src=\"./assets/search.svg\"/>\r\n  </button>\r\n</div>\r\n"
+module.exports = "<div class=\"main\">\n  <video #video autoplay></video>\n  <button (click)=\"sendCurrentFrame()\">\n    חפש עכשיו! <img src=\"./assets/search.svg\"/>\n  </button>\n</div>\n"
 
 /***/ }),
 
@@ -406,7 +407,7 @@ module.exports = "<div class=\"main\">\r\n  <video #video autoplay></video>\r\n 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "button {\n  position: absolute;\n  left: 0;\n  bottom: 13px;\n  width: 100%;\n  display: flex;\n  flex-flow: row;\n  justify-content: center;\n  align-items: center;\n  font-size: 18px;\n  font-weight: 700;\n  color: white;\n  background: rgba(0, 0, 0, 0.6);\n  border: none;\n  padding: 10px;\n  box-sizing: border-box;\n  transition: all 1s;\n  outline: 0;\n  direction: rtl; }\n  button img {\n    width: 40px; }\n  button:active {\n    background: rgba(189, 185, 185, 0.45); }\n  video {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover; }\n"
+module.exports = "button {\n  position: absolute;\n  left: 0;\n  bottom: 0;\n  width: 100%;\n  display: flex;\n  flex-flow: row;\n  justify-content: center;\n  align-items: center;\n  font-size: 18px;\n  font-weight: 700;\n  color: white;\n  background: rgba(0, 0, 0, 0.6);\n  border: none;\n  padding: 10px;\n  box-sizing: border-box;\n  transition: all 1s;\n  outline: 0;\n  direction: rtl; }\n  button img {\n    width: 40px; }\n  button:active {\n    background: rgba(189, 185, 185, 0.45); }\n  video {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover; }\n"
 
 /***/ }),
 
@@ -513,7 +514,7 @@ var VideoGameComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n  <p *ngIf=\"data.title\">{{data.title}}</p>\r\n  <video #video (ended)=\"close()\" width=\"100%\"\r\n          [src]=\"iframeUrl()\"\r\n           controls\r\n           autoplay>\r\n  </video>\r\n</div>\r\n"
+module.exports = "<div>\n  <p *ngIf=\"data.title\">{{data.title}}</p>\n  <video #video (load)=\"startVideo()\" (ended)=\"close()\" width=\"100%\"\n          [src]=\"iframeUrl()\"\n           controls\n           autoplay>\n  </video>\n</div>\n"
 
 /***/ }),
 
@@ -561,7 +562,6 @@ var YouTuveIframeComponent = /** @class */ (function () {
         this.dialogRef = dialogRef;
         this.sanitizer = sanitizer;
         this.data = data;
-        console.log(data);
     }
     YouTuveIframeComponent.prototype.iframeUrl = function () {
         return this.sanitizer.bypassSecurityTrustResourceUrl(this.data.url);
@@ -569,8 +569,15 @@ var YouTuveIframeComponent = /** @class */ (function () {
     YouTuveIframeComponent.prototype.close = function () {
         this.dialogRef.close();
     };
+    YouTuveIframeComponent.prototype.startVideo = function () {
+        this.video.nativeElement.start();
+    };
     YouTuveIframeComponent.prototype.ngOnInit = function () {
     };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('video'),
+        __metadata("design:type", Object)
+    ], YouTuveIframeComponent.prototype, "video", void 0);
     YouTuveIframeComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-you-tuve-iframe',
@@ -650,7 +657,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\kessi\Repo\soroka-hackathon\client\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Volumes/dev/soroka-hackathon/client/src/main.ts */"./src/main.ts");
 
 
 /***/ })
