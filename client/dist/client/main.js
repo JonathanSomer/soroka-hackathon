@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <h1 style=\"text-align: center;\">\n    אודות\n  </h1>\n  <p style=\"text-align: right;direction: rtl;\">\n    \"מי זה מה זה\", הינה אפליקציה שנוצרה בהאקטון בבית החולים סורוקה.\n    מטרתינו לייצר סביבה ידידותית ולאפשר לילדים להתחבר לציוד ולאנשים בבית החולים בצורה מסקרנת וכיפית.\n  </p>\n  <h2 style=\"text-align: center;\">\n    הקבוצה\n  </h2>\n  <p style=\"text-align: right;direction: rtl;\">\n    יוסי עינב, יהונתן זומר, עידו קסלר, ד\"ר מנור שפריץ, ליאת טודריס, רויטל גוטרמן, קלאודיו אלתר, אנדי פלקון, סטאס ריבקין.\n  </p>\n</div>\n"
+module.exports = "<div class=\"about\">\n  <h1 style=\"text-align: center;\">\n    אודות\n  </h1>\n  <p style=\"text-align: right;direction: rtl;\">\n    \"מי זה מה זה\", הינה אפליקציה שנוצרה בהאקטון בבית החולים סורוקה.\n    מטרתינו לייצר סביבה ידידותית ולאפשר לילדים להתחבר לציוד ולאנשים בבית החולים בצורה מסקרנת וכיפית.\n  </p>\n  <h2 style=\"text-align: center;\">\n    הקבוצה\n  </h2>\n  <p style=\"text-align: right;direction: rtl;\">\n    יוסי עינב, יהונתן זומר, עידו קסלר, ד\"ר מנור שפריץ, ליאת טודריס, רויטל גוטרמן, קלאודיו אלתר, אנדי פלקון, סטאס ריבקין.\n  </p>\n\n  <img  class=\"team\" src=\"../../assets/the_team.jpeg\"/>\n</div>\n"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = "<div>\n  <h1 style=\"text-align: center;\">\n    אודות\n 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "div {\n  padding: 10px; }\n\nh2, h1 {\n  margin-top: 15px; }\n"
+module.exports = ".about {\n  padding: 30px;\n  position: relative;\n  top: 30px;\n  font-family: 'Open Sans Hebrew';\n  line-height: 1.5; }\n\nh2, h1 {\n  margin-top: 15px; }\n\n.team {\n  width: 100%;\n  margin-top: 20px;\n  display: block; }\n"
 
 /***/ }),
 
@@ -93,7 +93,7 @@ var AboutUsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <div class=\"main\">\n    <router-outlet></router-outlet>\n  </div>\n\n  <div style=\"\n    position: absolute;\n    z-index: 1;\n    top: 10px;\n    display: flex;\n    left: 0;\n    align-items: center;\n    width: 100%;\n    justify-content: space-between;\n    padding: 0 20px;\n    box-sizing: border-box;\n    text-align: center;\">\n\n    <button class=\"main-menu\" mat-button [matMenuTriggerFor]=\"menu\">\n      <mat-icon>menu</mat-icon>\n      תפריט\n    </button>\n    <mat-menu #menu=\"matMenu\">\n      <button mat-menu-item>\n        <a routerLink=\"/employees\"  mat-menu-item routerLinkActive=\"active\">הצוות המטפל</a>\n      </button>\n      <button mat-menu-item>\n        <a routerLink=\"/video-game\"  mat-menu-item routerLinkActive=\"active\">גלה את החפצים סביבך</a>\n      </button>\n      <button mat-menu-item>\n        <a routerLink=\"/about-us\"  mat-menu-item routerLinkActive=\"active\">אודות</a>\n      </button>\n    </mat-menu>\n\n    <img src=\"./images/logo.png\" style=\" width: 140px;\">\n\n  </div>\n\n</div>\n"
+module.exports = "<div>\n  <div class=\"main\">\n    <router-outlet></router-outlet>\n  </div>\n\n  <div style=\"\n    position: absolute;\n    z-index: 1;\n    top: 10px;\n    display: flex;\n    left: 0;\n    align-items: center;\n    width: 100%;\n    justify-content: space-between;\n    padding: 0 20px;\n    box-sizing: border-box;\n    text-align: center;\">\n\n    <button class=\"main-menu\" mat-button [matMenuTriggerFor]=\"menu\">\n      <mat-icon>menu</mat-icon>\n      תפריט\n    </button>\n    <mat-menu #menu=\"matMenu\">\n      <button mat-menu-item>\n        <a routerLink=\"/video-game\"  mat-menu-item routerLinkActive=\"active\">גלה את החפצים סביבך</a>\n      </button>\n      <button mat-menu-item>\n        <a routerLink=\"/employees\"  mat-menu-item routerLinkActive=\"active\">הצוות המטפל</a>\n      </button>\n      <button mat-menu-item>\n        <a routerLink=\"/about-us\"  mat-menu-item routerLinkActive=\"active\">אודות</a>\n      </button>\n    </mat-menu>\n\n    <img src=\"./images/logo.png\" style=\" width: 140px;\">\n\n  </div>\n\n</div>\n"
 
 /***/ }),
 
@@ -104,7 +104,7 @@ module.exports = "<div>\n  <div class=\"main\">\n    <router-outlet></router-out
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "mat-tab-group {\n  position: absolute;\n  bottom: 0; }\n\n.main-menu {\n  background: white; }\n\n.main {\n  background-image: url('client/dist/client/bg.jpg');\n  background-size: cover; }\n\np {\n  font-family: 'Open Sans', sans-serif; }\n"
+module.exports = "@import url(//fonts.googleapis.com/earlyaccess/opensanshebrew.css);\nmat-tab-group {\n  position: absolute;\n  bottom: 0; }\n.main-menu {\n  background: white; }\n.main {\n  background-image: url('client/dist/client/bg.jpg');\n  background-size: cover; }\np, button, a {\n  font-family: 'Open Sans Hebrew', sans-serif; }\n"
 
 /***/ }),
 
@@ -142,12 +142,12 @@ var AppComponent = /** @class */ (function () {
     }
     AppComponent.prototype.openyouTubeMovie = function (url, title) {
         return this.dialog.open(_you_tuve_iframe_you_tuve_iframe_component__WEBPACK_IMPORTED_MODULE_2__["YouTuveIframeComponent"], {
-            width: '400px',
+            width: '500px',
             data: { url: url, title: title }
         });
     };
     AppComponent.prototype.ngOnInit = function () {
-        this.openyouTubeMovie('./assets/about_movie.mp4', 'ברוכים הבאים למי מה מו!');
+        this.openyouTubeMovie('./assets/about_movie.mp4', '');
     };
     AppComponent.prototype.changeCurrentTab = function (index) {
         switch (index) {
@@ -268,7 +268,8 @@ var AppModule = /** @class */ (function () {
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatMenuModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatIconModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatButtonModule"],
-                _angular_router__WEBPACK_IMPORTED_MODULE_8__["RouterModule"].forRoot(appRoutes, { enableTracing: true, useHash: true } // <-- debugging purposes only
+                _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatSnackBarModule"],
+                _angular_router__WEBPACK_IMPORTED_MODULE_8__["RouterModule"].forRoot(appRoutes, { useHash: true } // <-- debugging purposes only
                 )
             ],
             entryComponents: [
@@ -297,7 +298,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"employees-container\">\n  <h1>{{ employes[currentEmployee].name }}</h1>\n  <div class=\"employee\" (swipeleft)=\"swipe($event.type)\" (swiperight)=\"swipe($event.type)\">\n    <img [src]=\"employes[currentEmployee].imageUrl\"/>\n  </div>\n\n  <button (click)=\"clickOnEmployee()\" mat-button>\n    נגן וידאו\n    <mat-icon>play_circle_filled</mat-icon>\n  </button>\n</nav>\n"
+module.exports = "<nav class=\"employees-container\">\n  <h1>{{ employes[currentEmployee].name }}</h1>\n  <div class=\"employee\" (swipeleft)=\"swipe($event.type)\" (swiperight)=\"swipe($event.type)\">\n    <img (click)=\"clickOnEmployee()\" [src]=\"employes[currentEmployee].imageUrl\"/>\n  </div>\n\n  <button (click)=\"clickOnEmployee()\" mat-button>\n    נגן וידאו\n    <mat-icon>play_circle_filled</mat-icon>\n  </button>\n</nav>\n"
 
 /***/ }),
 
@@ -308,7 +309,7 @@ module.exports = "<nav class=\"employees-container\">\n  <h1>{{ employes[current
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".employee {\n  display: block;\n  text-align: center;\n  width: 100%;\n  background-image: url('client/dist/client/hospital_room.png');\n  background-size: cover; }\n  .employee img {\n    width: 100%;\n    max-width: 400px; }\n  .employees-container {\n  height: 100%;\n  display: flex;\n  flex-flow: column;\n  align-items: center;\n  justify-content: center; }\n  h1 {\n  font-size: 30px;\n  margin-bottom: 20px; }\n  button {\n  direction: rtl;\n  font-size: 18px;\n  font-weight: 500; }\n"
+module.exports = ".employee {\n  display: block;\n  text-align: center;\n  width: 100%;\n  background-image: url('client/dist/client/hospital_room.png');\n  background-size: cover; }\n  .employee img {\n    width: 100%;\n    max-width: 400px; }\n  .employees-container {\n  height: 100%;\n  display: flex;\n  flex-flow: column;\n  align-items: center;\n  justify-content: center; }\n  h1 {\n  font-size: 30px;\n  margin-bottom: 20px; }\n  button {\n  direction: rtl;\n  font-size: 30px;\n  font-weight: 800; }\n  h1, button {\n  font-family: 'Open Sans Hebrew', sans-serif; }\n"
 
 /***/ }),
 
@@ -407,7 +408,7 @@ module.exports = "<div class=\"main\">\n  <video #video autoplay></video>\n  <bu
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "button {\n  position: absolute;\n  left: 0;\n  bottom: 0;\n  width: 100%;\n  display: flex;\n  flex-flow: row;\n  justify-content: center;\n  align-items: center;\n  font-size: 18px;\n  font-weight: 700;\n  color: white;\n  background: rgba(0, 0, 0, 0.6);\n  border: none;\n  padding: 10px;\n  box-sizing: border-box;\n  transition: all 1s;\n  outline: 0;\n  direction: rtl; }\n  button img {\n    width: 40px; }\n  button:active {\n    background: rgba(189, 185, 185, 0.45); }\n  video {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover; }\n"
+module.exports = "button {\n  position: absolute;\n  left: 0;\n  width: 100%;\n  display: flex;\n  flex-flow: row;\n  justify-content: center;\n  align-items: center;\n  font-size: 18px;\n  font-weight: 700;\n  color: white;\n  background: rgba(0, 0, 0, 0.6);\n  padding: 10px;\n  box-sizing: border-box;\n  transition: all 200ms;\n  outline: 0;\n  direction: rtl;\n  z-index: 1000;\n  border: 2px solid #6db6e7;\n  bottom: 2px;\n  font-family: 'Open Sans Hebrew'; }\n  button img {\n    width: 40px; }\n  button:active {\n    background: rgba(189, 185, 185, 0.45); }\n  video {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover; }\n"
 
 /***/ }),
 
@@ -424,6 +425,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _you_tuve_iframe_you_tuve_iframe_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../you-tuve-iframe/you-tuve-iframe.component */ "./src/app/you-tuve-iframe/you-tuve-iframe.component.ts");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_3__);
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -436,12 +439,20 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var VideoGameComponent = /** @class */ (function () {
-    function VideoGameComponent(dialog) {
+    function VideoGameComponent(dialog, snackBar) {
         this.dialog = dialog;
+        this.snackBar = snackBar;
+        this.openDialogRef = null;
+        this.sendCurrentFrame = Object(lodash__WEBPACK_IMPORTED_MODULE_3__["debounce"])(this.sendCurrentFrame, 1000, { leading: true });
     }
     VideoGameComponent.prototype.openyouTubeMovie = function (url, title) {
-        var dialogRef = this.dialog.open(_you_tuve_iframe_you_tuve_iframe_component__WEBPACK_IMPORTED_MODULE_1__["YouTuveIframeComponent"], {
+        if (this.openDialogRef) {
+            this.openDialogRef.close();
+            delete this.openDialogRef;
+        }
+        this.openDialogRef = this.dialog.open(_you_tuve_iframe_you_tuve_iframe_component__WEBPACK_IMPORTED_MODULE_1__["YouTuveIframeComponent"], {
             width: '400px',
             data: { url: url, title: title }
         });
@@ -467,6 +478,8 @@ var VideoGameComponent = /** @class */ (function () {
                 .then(function (r) { return r.json(); })
                 .then(function (data) {
                 _this.openyouTubeMovie(data.url, data.name + " - " + data.description);
+            }).catch(function (e) {
+                _this.snackBar.open('שגיאה. נסה שנית', null, { duration: 2000 });
             });
         }, 'image/jpeg');
     };
@@ -498,7 +511,7 @@ var VideoGameComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./video-game.component.html */ "./src/app/video-game/video-game.component.html"),
             styles: [__webpack_require__(/*! ./video-game.component.scss */ "./src/app/video-game/video-game.component.scss")]
         }),
-        __metadata("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialog"]])
+        __metadata("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialog"], _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSnackBar"]])
     ], VideoGameComponent);
     return VideoGameComponent;
 }());
@@ -514,7 +527,7 @@ var VideoGameComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <p *ngIf=\"data.title\">{{data.title}}</p>\n  <video #video (load)=\"startVideo()\" (ended)=\"close()\" width=\"100%\"\n          [src]=\"iframeUrl()\"\n           controls\n           autoplay>\n  </video>\n</div>\n"
+module.exports = "<div>\n  <p *ngIf=\"data.title\">{{data.title}}</p>\n  <video #video (ended)=\"close()\" width=\"100%\"\n          [src]=\"iframeUrl()\"\n           controls\n           autoplay>\n  </video>\n</div>\n"
 
 /***/ }),
 
@@ -525,7 +538,7 @@ module.exports = "<div>\n  <p *ngIf=\"data.title\">{{data.title}}</p>\n  <video 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "p {\n  text-align: right;\n  margin-bottom: 10px;\n  direction: rtl; }\n"
+module.exports = "p {\n  text-align: right;\n  margin-bottom: 10px;\n  direction: rtl;\n  background-color: #b689be;\n  font-family: 'Open Sans Hebrew', sans-serif;\n  font-weight: 500;\n  line-height: 1.5; }\n"
 
 /***/ }),
 
@@ -570,9 +583,10 @@ var YouTuveIframeComponent = /** @class */ (function () {
         this.dialogRef.close();
     };
     YouTuveIframeComponent.prototype.startVideo = function () {
-        this.video.nativeElement.start();
+        this.video.nativeElement.play();
     };
     YouTuveIframeComponent.prototype.ngOnInit = function () {
+        this.startVideo();
     };
     __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])('video'),
