@@ -28,6 +28,12 @@ h1 {
 
 button {
   direction: rtl;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 30px;
+  font-weight: 800;
+
+}
+
+
+h1, button {
+  font-family: 'Open Sans Hebrew', sans-serif;
 }

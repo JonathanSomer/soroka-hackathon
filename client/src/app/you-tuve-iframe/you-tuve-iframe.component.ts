@@ -26,10 +26,11 @@ export class YouTuveIframeComponent implements OnInit {
   }
 
   startVideo() {
-    this.video.nativeElement.start();
+    this.video.nativeElement.play();
   }
 
   ngOnInit() {
+    this.startVideo();
   }
 
 }

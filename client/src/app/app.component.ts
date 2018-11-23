@@ -16,13 +16,13 @@ export class AppComponent implements OnInit {
 
   openyouTubeMovie(url: string, title: string) {
     return this.dialog.open(YouTuveIframeComponent, {
-      width: '400px',
+      width: '500px',
       data: {url: url, title}
     });
   }
 
   ngOnInit(): void {
-    this.openyouTubeMovie('./assets/about_movie.mp4','ברוכים הבאים למי מה מו!');
+    this.openyouTubeMovie('./assets/about_movie.mp4','');
   }
 
   changeCurrentTab(index) {

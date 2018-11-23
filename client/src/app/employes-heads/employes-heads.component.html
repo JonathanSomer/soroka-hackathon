@@ -1,7 +1,7 @@
 <nav class="employees-container">
   <h1>{{ employes[currentEmployee].name }}</h1>
   <div class="employee" (swipeleft)="swipe($event.type)" (swiperight)="swipe($event.type)">
-    <img [src]="employes[currentEmployee].imageUrl"/>
+    <img (click)="clickOnEmployee()" [src]="employes[currentEmployee].imageUrl"/>
   </div>
 
   <button (click)="clickOnEmployee()" mat-button>
