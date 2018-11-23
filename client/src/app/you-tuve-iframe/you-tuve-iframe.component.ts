@@ -1,4 +1,4 @@
-import {Component, Inject, OnInit} from '@angular/core';
+import {Component, Inject, OnInit, ViewChild} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 import { DomSanitizer} from '@angular/platform-browser';
 
@@ -10,10 +10,11 @@ import { DomSanitizer} from '@angular/platform-browser';
 })
 export class YouTuveIframeComponent implements OnInit {
 
+  @ViewChild('video') video;
+
   constructor(
     public dialogRef: MatDialogRef<YouTuveIframeComponent>, private sanitizer: DomSanitizer,
     @Inject(MAT_DIALOG_DATA) public data: any) {
-    console.log(data);
   }
 
   iframeUrl() {
@@ -22,6 +23,10 @@ export class YouTuveIframeComponent implements OnInit {
 
   close() {
     this.dialogRef.close();
+  }
+
+  startVideo() {
+    this.video.nativeElement.start();
   }
 
   ngOnInit() {

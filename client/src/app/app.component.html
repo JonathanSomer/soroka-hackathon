@@ -3,19 +3,37 @@
     <router-outlet></router-outlet>
   </div>
 
-  <button class="main-menu" mat-button [matMenuTriggerFor]="menu">
-    <mat-icon>menu</mat-icon>
-    Menu
-  </button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item>
-      <a routerLink="/employees"  mat-menu-item routerLinkActive="active">הצוות המטפל</a>
+  <div style="
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    display: flex;
+    left: 0;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center;">
+
+    <button class="main-menu" mat-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+      תפריט
     </button>
-    <button mat-menu-item>
-      <a routerLink="/video-game"  mat-menu-item routerLinkActive="active">גלה את החפצים סביבך</a>
-    </button>
-    <button mat-menu-item>
-      <a routerLink="/about-us"  mat-menu-item routerLinkActive="active">אודות</a>
-    </button>
-  </mat-menu>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <a routerLink="/employees"  mat-menu-item routerLinkActive="active">הצוות המטפל</a>
+      </button>
+      <button mat-menu-item>
+        <a routerLink="/video-game"  mat-menu-item routerLinkActive="active">גלה את החפצים סביבך</a>
+      </button>
+      <button mat-menu-item>
+        <a routerLink="/about-us"  mat-menu-item routerLinkActive="active">אודות</a>
+      </button>
+    </mat-menu>
+
+    <img src="./images/logo.png" style=" width: 140px;">
+
+  </div>
+
 </div>

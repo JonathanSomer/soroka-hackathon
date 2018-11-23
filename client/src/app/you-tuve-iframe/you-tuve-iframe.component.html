@@ -1,6 +1,6 @@
 <div>
   <p *ngIf="data.title">{{data.title}}</p>
-  <video #video (ended)="close()" width="100%"
+  <video #video (load)="startVideo()" (ended)="close()" width="100%"
           [src]="iframeUrl()"
            controls
            autoplay>
