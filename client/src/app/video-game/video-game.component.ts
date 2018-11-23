@@ -14,7 +14,7 @@ export class VideoGameComponent implements OnInit {
   @ViewChild('video') video;
 
   constructor(private dialog: MatDialog, public snackBar: MatSnackBar) {
-    this.sendCurrentFrame = debounce(this.sendCurrentFrame, 1000, { leading: true });
+    this.sendCurrentFrame = debounce(this.sendCurrentFrame, 1500);
   }
 
   openyouTubeMovie(url: string, title: string) {
