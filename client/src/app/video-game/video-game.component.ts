@@ -1,6 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {YouTuveIframeComponent} from '../you-tuve-iframe/you-tuve-iframe.component';
-import {MatDialog} from '@angular/material';
+import {MatDialog, MatSnackBar} from '@angular/material';
+import {debounce} from 'lodash';
 
 @Component({
   selector: 'app-video-game',
@@ -9,12 +10,20 @@ import {MatDialog} from '@angular/material';
 })
 export class VideoGameComponent implements OnInit {
   srcObject: null;
+  openDialogRef = null
   @ViewChild('video') video;
 
-  constructor(private dialog: MatDialog) { }
+  constructor(private dialog: MatDialog, public snackBar: MatSnackBar) {
+    this.sendCurrentFrame = debounce(this.sendCurrentFrame, 1000, { leading: true });
+  }
 
   openyouTubeMovie(url: string, title: string) {
-    const dialogRef = this.dialog.open(YouTuveIframeComponent, {
+    if (this.openDialogRef) {
+      this.openDialogRef.close();
+      delete this.openDialogRef;
+    }
+
+    this.openDialogRef = this.dialog.open(YouTuveIframeComponent, {
       width: '400px',
       data: {url: url, title}
     });
@@ -46,6 +55,8 @@ export class VideoGameComponent implements OnInit {
         .then(r => r.json())
         .then((data) => {
           this.openyouTubeMovie( data.url, `${data.name} - ${data.description}`);
+        }).catch((e) => {
+          this.snackBar.open('שגיאה. נסה שנית', null, { duration: 3000 });
         });
     }, 'image/jpeg');
   }

@@ -7,7 +7,7 @@ import {
   MatCheckboxModule,
   MatDialogModule,
   MatIconModule,
-  MatMenuModule,
+  MatMenuModule, MatSnackBarModule,
   MatTableModule,
   MatTabsModule
 } from '@angular/material';
@@ -62,9 +62,10 @@ const appRoutes: Routes = [
     MatMenuModule,
     MatIconModule,
     MatButtonModule,
+    MatSnackBarModule,
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true, useHash: true} // <-- debugging purposes only
+      { useHash: true} // <-- debugging purposes only
     )
   ],
   entryComponents: [
