@@ -15,13 +15,15 @@ export class AppComponent implements OnInit {
 
 
   openyouTubeMovie(url: string, title: string) {
-    const dialogRef = this.dialog.open(YouTuveIframeComponent, {
+    return this.dialog.open(YouTuveIframeComponent, {
       width: '400px',
       data: {url: url, title}
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.openyouTubeMovie('./assets/about_movie.mp4','ברוכים הבאים למי מה מו!');
+  }
 
   changeCurrentTab(index) {
     switch (index) {
@@ -35,9 +37,5 @@ export class AppComponent implements OnInit {
         this.router.navigateByUrl('/about-us');
         break;
     }
-  }
-
-  onEmployeeClick(employee) {
-    this.openyouTubeMovie(employee.videoUrl, employee.name);
   }
 }
