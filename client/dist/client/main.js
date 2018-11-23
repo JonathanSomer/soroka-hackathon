@@ -445,7 +445,7 @@ var VideoGameComponent = /** @class */ (function () {
         this.dialog = dialog;
         this.snackBar = snackBar;
         this.openDialogRef = null;
-        this.sendCurrentFrame = Object(lodash__WEBPACK_IMPORTED_MODULE_3__["debounce"])(this.sendCurrentFrame, 1000, { leading: true });
+        this.sendCurrentFrame = Object(lodash__WEBPACK_IMPORTED_MODULE_3__["debounce"])(this.sendCurrentFrame, 1500);
     }
     VideoGameComponent.prototype.openyouTubeMovie = function (url, title) {
         if (this.openDialogRef) {
