@@ -17,7 +17,8 @@ export class EmployesHeadsComponent implements OnInit {
   public employes = [
     { name: 'קלאודיו אלתר', title: 'אח', imageUrl: './assets/claudio.png', videoUrl: './assets/cloud.mp4'},
     { name: 'רויטל גוטרמן', title: 'אחות', imageUrl: './assets/revital.png', videoUrl: './assets/revi.mp4'},
-    { name: 'מנור שפריץ', title: 'רופא', imageUrl: './assets/manor.png', videoUrl: './assets/cloud.mp4'}
+    { name: 'מנור שפריץ', title: 'רופא', imageUrl: './assets/manor.png', videoUrl: './assets/cloud.mp4'},
+    { name: 'סטאס ריבקין', title: 'מלך', imageUrl: './assets/stas.png', videoUrl: './assets/stas.mp4'}
   ];
 
   openyouTubeMovie(url: string, title: string) {

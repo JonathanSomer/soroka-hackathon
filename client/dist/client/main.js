@@ -104,7 +104,7 @@ module.exports = "<div>\r\n  <div class=\"main\">\r\n    <router-outlet></router
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "mat-tab-group {\n  position: absolute;\n  bottom: 0; }\n"
+module.exports = "mat-tab-group {\n  position: absolute;\n  bottom: 0; }\n\n.main {\n  background-image: url('client/dist/client/bg.jpg');\n  background-size: cover; }\n"
 
 /***/ }),
 
@@ -342,9 +342,10 @@ var EmployesHeadsComponent = /** @class */ (function () {
         this.dialog = dialog;
         this.currentEmployee = 1;
         this.employes = [
-            { name: 'קלאודיו אלתר', title: 'אח', imageUrl: './assets/claudio.png', videoUrl: 'https://www.youtube.com/embed/V-7pTTNvUs8' },
-            { name: 'רויטל גוטרמן', title: 'אחות', imageUrl: './assets/revital.png', videoUrl: 'https://www.youtube.com/embed/UQ2wIJj__ls' },
-            { name: 'מנור שפריץ', title: 'רופא', imageUrl: './assets/manor.png', videoUrl: 'https://www.youtube.com/embed/V-7pTTNvUs8' }
+            { name: 'קלאודיו אלתר', title: 'אח', imageUrl: './assets/claudio.png', videoUrl: './assets/cloud.mp4' },
+            { name: 'רויטל גוטרמן', title: 'אחות', imageUrl: './assets/revital.png', videoUrl: './assets/revi.mp4' },
+            { name: 'מנור שפריץ', title: 'רופא', imageUrl: './assets/manor.png', videoUrl: './assets/cloud.mp4' },
+            { name: 'סטאס ריבקין', title: 'מלך', imageUrl: './assets/stas.png', videoUrl: './assets/stas.mp4' }
         ];
     }
     EmployesHeadsComponent.prototype.ngOnInit = function () {
@@ -395,7 +396,7 @@ var EmployesHeadsComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"main\">\r\n  <video #video autoplay></video>\r\n  <button (click)=\"sendCurrentFrame()\">\r\n    <img src=\"./assets/search.svg\"/> Search Now!\r\n  </button>\r\n</div>\r\n"
+module.exports = "<div class=\"main\">\r\n  <video #video autoplay></video>\r\n  <button (click)=\"sendCurrentFrame()\">\r\n    חפש עכשיו! <img src=\"./assets/search.svg\"/>\r\n  </button>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -406,7 +407,7 @@ module.exports = "<div class=\"main\">\r\n  <video #video autoplay></video>\r\n 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "button {\n  position: absolute;\n  left: 0;\n  bottom: 13px;\n  width: 100%;\n  display: flex;\n  flex-flow: row;\n  justify-content: center;\n  align-items: center;\n  font-size: 18px;\n  font-weight: 700;\n  color: white;\n  background: rgba(0, 0, 0, 0.6);\n  border: none;\n  padding: 10px;\n  box-sizing: border-box;\n  transition: all 1s;\n  outline: 0; }\n  button img {\n    width: 40px; }\n  button:active {\n    background: rgba(189, 185, 185, 0.45); }\n  video {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover; }\n"
+module.exports = "button {\n  position: absolute;\n  left: 0;\n  bottom: 13px;\n  width: 100%;\n  display: flex;\n  flex-flow: row;\n  justify-content: center;\n  align-items: center;\n  font-size: 18px;\n  font-weight: 700;\n  color: white;\n  background: rgba(0, 0, 0, 0.6);\n  border: none;\n  padding: 10px;\n  box-sizing: border-box;\n  transition: all 1s;\n  outline: 0;\n  direction: rtl; }\n  button img {\n    width: 40px; }\n  button:active {\n    background: rgba(189, 185, 185, 0.45); }\n  video {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover; }\n"
 
 /***/ }),
 
@@ -513,7 +514,7 @@ var VideoGameComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n  <p *ngIf=\"data.title\">{{data.title}}</p>\r\n  <iframe width=\"100%\" height=\"400px\"\r\n          [src]=\"iframeUrl()\"\r\n          frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen>\r\n\r\n  </iframe>\r\n</div>\r\n"
+module.exports = "<div>\r\n  <p *ngIf=\"data.title\">{{data.title}}</p>\r\n  <video width=\"100%\"\r\n          [src]=\"iframeUrl()\"\r\n           controls\r\n           autoplay>\r\n  </video>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -524,7 +525,7 @@ module.exports = "<div>\r\n  <p *ngIf=\"data.title\">{{data.title}}</p>\r\n  <if
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "p {\n  text-align: right; }\n"
+module.exports = "p {\n  text-align: right;\n  margin-bottom: 10px; }\n"
 
 /***/ }),
 
