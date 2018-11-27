@@ -527,7 +527,7 @@ var VideoGameComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <p *ngIf=\"data.title\">{{data.title}}</p>\n  <video #video (ended)=\"close()\" width=\"100%\"\n          [src]=\"iframeUrl()\"\n           controls\n           autoplay>\n  </video>\n</div>\n"
+module.exports = "<div>\n  <p *ngIf=\"data.title\">{{data.title}}</p>\n  <video #video playsinline (ended)=\"close()\" width=\"100%\"\n          [src]=\"iframeUrl()\"\n           controls\n           autoplay>\n  </video>\n</div>\n"
 
 /***/ }),
 
